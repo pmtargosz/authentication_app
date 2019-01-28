@@ -18,9 +18,11 @@
   "author": "Pawel Targosz <pmtargosz@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.4.7",
+    "mongoose-timestamp": "^0.6.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9"
   }
