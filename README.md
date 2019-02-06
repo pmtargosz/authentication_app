@@ -51,6 +51,7 @@ npm start
 - [mongoose](https://mongoosejs.com/) - Elegant mongodb object modeling for node.js.
 - [mongoose-timestamp](https://www.npmjs.com/package/mongoose-timestamp) - Simple plugin for Mongoose which adds createdAt and updatedAt date attributes that get auto-assigned to the most recent create/update timestamp.
 - [mLab](https://mlab.com) - mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers.
+- [passport](http://www.passportjs.org/) - Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. A comprehensive set of strategies support authentication using a username and password, Facebook, Twitter, and more.
 
 ## License
 

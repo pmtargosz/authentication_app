@@ -1,5 +1,25 @@
 const bcrypt = require('bcryptjs');
+const jwt = require('jwt-simple');
+const config = require('../config');
 const User = require('../models/user');
+
+const tokenForUser = user => {
+    const timestamp = new Date().getTime();
+
+    return jwt.encode({
+        sub: user.id,
+        iat: timestamp
+    }, config.SECRET_STRING)
+}
+
+exports.signin = (req, res, next) => {
+    // User has aleady had thier email and password auth'd
+    // We just need to give them a token
+
+    res.send({
+        token: tokenForUser(req.user)
+    })
+}
 
 exports.signup = async (req, res, next) => {
     const {
@@ -47,7 +67,7 @@ exports.signup = async (req, res, next) => {
 
                 // Respond to request indicating the user was created 
                 res.json({
-                    sucess: true
+                    token: tokenForUser(user)
                 });
                 next();
             } catch (err) {
